@@ -196,11 +196,7 @@ export const C3Icon: React.FC<IconProps> = ({ className, iconClassName }) => {
       viewBox="0 0 46 46"
       className={className}
     >
-      <g
-        id="Group_5710"
-        data-name="Group 5710"
-        transform="translate(-62 -1001)"
-      >
+      <g transform="translate(-62 -1001)">
         <g
           id="Group_5681"
           data-name="Group 5681"
@@ -215,7 +211,7 @@ export const C3Icon: React.FC<IconProps> = ({ className, iconClassName }) => {
             transform="translate(10969 3253)"
             fill="#191919"
             stroke="#191919"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <g id="c3_black" transform="translate(10981.956 3262.16)">
             <path
