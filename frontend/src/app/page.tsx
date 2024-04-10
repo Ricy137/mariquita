@@ -1,7 +1,6 @@
 import RockImg from '@/assets/imgs/rock.jpg';
 import DeserImg from '@/assets/imgs/desert.jpg';
 import Image from 'next/image';
-import FloatItems from './FloatItems';
 
 export default function Home() {
   return (
