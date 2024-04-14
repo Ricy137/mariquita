@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import NavBar from '@/modules/navBar';
+import BgCanvas from './BgCanvas';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <NavBar />
+        <BgCanvas />
         {children}
       </body>
     </html>

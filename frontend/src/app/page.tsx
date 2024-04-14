@@ -1,10 +1,10 @@
-import RockImg from '@/assets/imgs/rock.jpg';
-import DeserImg from '@/assets/imgs/desert.jpg';
-import Image from 'next/image';
+import TitleBoard from './TitleBoard';
+import Partners from './Partners';
 
 export default function Home() {
   return (
     <main className="relative left-[200px] w-[calc(100%-200px)] min-h-screen">
+      <TitleBoard />
       <div
         id="Mariquita"
         className="grid grid-cols-[2fr_1fr_1fr] grid-rows-[3fr_2fr_2fr_2fr_3fr] w-full min-h-screen text-[1.25rem]"
@@ -15,10 +15,10 @@ export default function Home() {
             blockchain technology...
           </p>
         </div>
-        <div className="col-span-2 bg-[url('/rock.jpg')] bg-fixed bg-cover bg-center rounded-[2rem] outline -outline-offset-[0.5px] outline-1 outline-[#ebebeb]" />
-        {/* <div className="col-span-2 outline -outline-offset-[0.5px] outline-1 outline-[#ebebeb]">
+        <div className="bg-[url('/rock.jpg')] bg-fixed bg-cover bg-center rounded-[2rem] outline -outline-offset-[0.5px] outline-1 outline-[#ebebeb]" />
+        <div className="outline -outline-offset-[0.5px] outline-1 outline-[#ebebeb]">
           <div className="w-full h-full rounded-[2rem] outline -outline-offset-[0.5px] outline-1 outline-[#ebebeb]" />
-        </div> */}
+        </div>
         <div className="row-span-3 bg-[url('/desert.jpg')] bg-fixed bg-cover bg-center rounded-[2rem] outline -outline-offset-[0.5px] outline-1 outline-[#ebebeb]" />
         <div className="p-[2rem] outline -outline-offset-[0.5px] outline-1 outline-[#ebebeb]">
           <p>Professional (feature1)</p>
@@ -52,7 +52,7 @@ export default function Home() {
           className="row-span-2 pointer-events-none select-none"
         /> */}
       </div>
-      <div className="w-full h-[700px]" />
+      <Partners />
     </main>
   );
 }

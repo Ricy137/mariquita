@@ -6,7 +6,7 @@ import MRIcon from '@/assets/icons/mr.svg';
 
 const NavBar: React.FC = () => {
   return (
-    <nav className="fixed left-0 top-0 px-[20px] flex flex-col gap-y-[24px] items-center justify-center w-[200px] h-full bg-white">
+    <nav className="fixed left-0 top-0 px-[20px] flex flex-col gap-y-[24px] items-center justify-center w-[200px] h-full">
       <div className="flex flex-col gap-y-[5px]">
         <p className="font-medium text-[20px] text-end">
           Mariquita de Boissière
