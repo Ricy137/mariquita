@@ -1,4 +1,5 @@
 export interface Partner {
+  org: string;
   name: string;
   title: string;
   logo: string;
@@ -8,6 +9,7 @@ export interface Partner {
 
 export const PARTNERS: Partner[] = [
   {
+    org: 'Surge',
     name: 'Dušanka Seratlić',
     title: 'Content Lead with Surge',
     link: 'https://www.surgewomen.io/',
@@ -16,6 +18,7 @@ export const PARTNERS: Partner[] = [
       'Mariquita does a great job communicating complex ideas in an accessible and friendly way. They excel in all aspects of content creation: from on-page SEO and detailed research to internal communication and accepting feedback with grace. ',
   },
   {
+    org: 'Cybrid',
     name: 'Lee Cocking',
     title: 'Head of Product at Cybrid',
     link: 'https://www.cybrid.xyz/',
@@ -24,6 +27,7 @@ export const PARTNERS: Partner[] = [
       'Mariquita is a talented writer, and a pleasure to collaborate with. Her content is deeply researched, and she has an impressive ability to weave in the perfect mix of brand elements, positioning and market intel, all while skillfully cross-referencing with previous works and calls-to-action. ',
   },
   {
+    org: 'New Society',
     name: 'Enrique Menendez',
     title: 'Editor-in-Chief at New Society',
     logo: '/ns.png',

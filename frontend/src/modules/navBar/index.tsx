@@ -11,11 +11,10 @@ const NavBar: React.FC = () => {
         <p className="font-medium text-[20px] text-end">
           Mariquita de Boissière
         </p>
-        <p className="font-light uppercase">
-          {' '}
-          content marketer and copywriter for web3 changemakers
-        </p>
       </div>
+      <Link className="font-medium text-[16px]" href="/">
+        Home
+      </Link>
       <ToolTip className="cursor-not-allowed" text="Coming soon">
         {/* <Link
           className="font-medium text-[16px] cursor-not-allowed"

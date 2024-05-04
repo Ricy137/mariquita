@@ -8,8 +8,8 @@ let tick = 0;
 let iceNodes: number[][] = [];
 let iceField: Ice[] = [];
 
-const maxTicks = 1000;
-const iterations = 3;
+const maxTicks = 200;
+const iterations = 5;
 const pattele = [
   '#ffffff',
   '#FFFEE9',
