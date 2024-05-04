@@ -14,7 +14,9 @@ export default Partners;
 
 const Testimonial: React.FC = () => (
   <div className="grid grid-cols-2 grid-rows-2 2xl:grid-cols-4 2xl:grid-rows-1 backdrop-blur-[50px]">
-    <div className="p-[40px] text-[2.25rem]">How people think of me?</div>
+    <div className="p-[40px] text-[2.25rem]">
+      buzz about me from other adventurers
+    </div>
     {PARTNERS.map((partner) => (
       <TestimonialItem key={partner.name} {...partner} />
     ))}
