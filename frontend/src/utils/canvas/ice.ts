@@ -8,7 +8,7 @@ let tick = 0;
 let iceNodes: number[][] = [];
 let iceField: Ice[] = [];
 
-const maxTicks = 200;
+const maxTicks = 300;
 const iterations = 5;
 const pattele = [
   '#ffffff',
@@ -124,10 +124,10 @@ export const drawIce = (
       try {
         frameCount++;
         requestAnimationFrame(() => {
-          if (!(frameCount % 3)) {
-            frame();
-          }
-          // frame();
+          // if (!(frameCount % 3)) {
+          //   frame();
+          // }
+          frame();
           startFrame();
         });
       } catch (e) {}

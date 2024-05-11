@@ -1,3 +1,7 @@
+import Image from 'next/image';
+import CopyW from '@/assets/imgs/copyW.jpeg';
+import Button from '@/components/Button';
+import { Service, SERVICES } from '@/utils/constants';
 import TitleBoard from './TitleBoard';
 import Partners from './Partners';
 
@@ -47,20 +51,39 @@ export default function Home() {
           </p>
         </div>
         <div className="bg-[url('/desert.jpg')] bg-fixed bg-cover bg-right-center rounded-[2rem]" />
-        {/* <Image
-          src={RockImg}
-          alt="Rock"
-          draggable={false}
-          className="pointer-events-none select-none"
-        />
-        <Image
-          src={DeserImg}
-          alt="Desert"
-          draggable={false}
-          className="row-span-2 pointer-events-none select-none"
-        /> */}
       </div>
+      <Services />
       <Partners />
     </main>
   );
 }
+
+const Services: React.FC = () => {
+  return (
+    <div className="grid grid-cols-4 backdrop-blur-[20px]">
+      {SERVICES.map((service) => (
+        <ServiceItem key={service.name} {...service} />
+      ))}
+      <div className="flex flex-col items-center justify-center gap-y-[20px] min-h-[400px] outline -outline-offset-[0.5px] outline-1 outline-[#ebebeb]">
+        <div className="w-[4/5]" />
+        <Button>Booking a call</Button>
+      </div>
+    </div>
+  );
+};
+
+const ServiceItem: React.FC<Service> = ({ name }) => {
+  return (
+    <div className="flex flex-col items-center justify-center gap-y-[20px] min-h-[400px] outline -outline-offset-[0.5px] outline-1 outline-[#ebebeb]">
+      <Image
+        src={CopyW}
+        alt={name}
+        width={520}
+        height={520}
+        className="w-3/5 select-none"
+        draggable={false}
+      />
+      <div className="xl:w-3/5 text-[2.25rem] text-center">{name}</div>
+    </div>
+  );
+};

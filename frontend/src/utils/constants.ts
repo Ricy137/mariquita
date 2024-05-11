@@ -36,3 +36,20 @@ export const PARTNERS: Partner[] = [
       'Mariquita is a talented writer, and a pleasure to collaborate with. Her content is deeply researched, and she has an impressive ability to weave in the perfect mix of brand elements, positioning and market intel, all while skillfully cross-referencing with previous works and calls-to-action. ',
   },
 ];
+
+export interface Service {
+  name: string;
+  description?: string;
+}
+
+export const SERVICES: Service[] = [
+  {
+    name: 'Copy Writing',
+  },
+  {
+    name: 'Content Marketing',
+  },
+  {
+    name: 'Community Managing',
+  },
+];
