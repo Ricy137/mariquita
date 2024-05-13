@@ -27,6 +27,11 @@
   @apply bg-[#F7F8FA] text-[#303549];
 }
 
+/* shadow button */
+.fui-button--shadow{
+  @apply drop-shadow-[4px_4px_#000]
+}
+
 /*color*/
 .fui-button--contained.fui-button--white {
   @apply bg-[#ffffff] text-[#000000];
@@ -36,11 +41,20 @@
   @apply bg-[#fde694] text-[#000];
 }
 
+.fui-button--shadow.fui-button--amber {
+  @apply bg-[#fde694] text-[#000];
+}
+
 .fui-button--contained.fui-button--white:hover {
   @apply bg-[rgba(255,255,255,0.12);] text-[#ffffff];
 }
 
 .fui-button--contained.fui-button--amber:hover {
-  @apply bg-[rgba(255,255,255,0.12);] text-[#ffffff];
+  @apply bg-[#FFCC4C] text-[#000];
 }
+
+.fui-button--shadow.fui-button--amber:hover {
+  @apply bg-[#FFCC4C] text-[#000];
+}
+
 

@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import CopyW from '@/assets/imgs/copyW.jpeg';
-import Button from '@/components/Button';
 import { Service, SERVICES } from '@/utils/constants';
 import TitleBoard from './TitleBoard';
 import Partners from './Partners';
+import CTABtn from './CTABtn';
 
 export default function Home() {
   return (
@@ -52,25 +52,19 @@ export default function Home() {
         </div>
         <div className="bg-[url('/desert.jpg')] bg-fixed bg-cover bg-right-center rounded-[2rem]" />
       </div>
-      <Services />
+      <div className="grid grid-cols-4 backdrop-blur-[20px]">
+        {SERVICES.map((service) => (
+          <ServiceItem key={service.name} {...service} />
+        ))}
+        <div className="flex flex-col items-center justify-center gap-y-[20px] min-h-[400px] outline -outline-offset-[0.5px] outline-1 outline-[#ebebeb]">
+          <div className="w-[4/5]" />
+          <CTABtn />
+        </div>
+      </div>
       <Partners />
     </main>
   );
 }
-
-const Services: React.FC = () => {
-  return (
-    <div className="grid grid-cols-4 backdrop-blur-[20px]">
-      {SERVICES.map((service) => (
-        <ServiceItem key={service.name} {...service} />
-      ))}
-      <div className="flex flex-col items-center justify-center gap-y-[20px] min-h-[400px] outline -outline-offset-[0.5px] outline-1 outline-[#ebebeb]">
-        <div className="w-[4/5]" />
-        <Button>Booking a call</Button>
-      </div>
-    </div>
-  );
-};
 
 const ServiceItem: React.FC<Service> = ({ name }) => {
   return (
