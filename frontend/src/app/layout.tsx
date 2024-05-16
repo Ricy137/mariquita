@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import NavBar from '@/modules/navBar';
-import BgCanvas from './BgCanvas';
+import BgCanvas from '@/modules/BgCanvas';
 import './globals.css';
 
 export const metadata: Metadata = {
