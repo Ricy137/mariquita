@@ -21,3 +21,4 @@ export const Canvas: React.FC<CanvasProps> = ({ draw, ...rest }) => {
 };
 
 export default Canvas;
+export * from './OffCanvas';
