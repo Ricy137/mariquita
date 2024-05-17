@@ -11,7 +11,8 @@ export const OffCanvas: React.FC<CanvasProps> = ({ draw, ...rest }) => {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (canvas) {
-      if (!workerRef.current) {
+      if (typeof OffscreenCanvas !== 'undefined') {
+        if (workerRef.current) return;
         const worker = new Worker(
           new URL('../../utils/canvas/worker.ts', import.meta.url),
           { type: 'module' }
@@ -19,14 +20,13 @@ export const OffCanvas: React.FC<CanvasProps> = ({ draw, ...rest }) => {
         workerRef.current = worker;
         const offscreenCanvas = canvas.transferControlToOffscreen();
         worker.postMessage({ canvas: offscreenCanvas }, [offscreenCanvas]);
+      } else {
+        //fallback to normal canvas
+        const ctx = canvas.getContext('2d');
+        if (ctx) {
+          draw(ctx);
+        }
       }
-      // else {
-      //   //fallback to normal canvas
-      //   const ctx = canvas.getContext('2d');
-      //   if (ctx) {
-      //     draw(ctx);
-      //   }
-      // }
     }
   }, []);
 
